@@ -2,15 +2,6 @@
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
- 
-export default function App() {
-  return (
-    <div>
-      {/* ... */}
-      <Analytics />
-    </div>
-  );
-}
 
 // Páginas Públicas
 import Home from './pages/Home';
@@ -106,6 +97,7 @@ const ProtectedRoute = ({ children, requireAdmin = false }) => {
 function App() {
     return (
         <BrowserRouter>
+            <Analytics />
             <Routes>
                 {/* ========================================================== */}
                 {/* Páginas Públicas */}
