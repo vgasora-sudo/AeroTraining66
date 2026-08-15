@@ -1,6 +1,7 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -97,8 +98,9 @@ const ProtectedRoute = ({ children, requireAdmin = false }) => {
 // ============================================================
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
+        <>
+            <BrowserRouter>
+                <Routes>
                 {/* ========================================================== */}
                 {/* Páginas Públicas */}
                 {/* ========================================================== */}
@@ -159,8 +161,10 @@ function App() {
                         </div>
                     </div>
                 } />
-            </Routes>
-        </BrowserRouter>
+                </Routes>
+            </BrowserRouter>
+            <Analytics />
+        </>
     );
 }
 
