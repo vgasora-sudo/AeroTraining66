@@ -1,7 +1,7 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Analytics } from "@vercel/analytics/react"
+
 
 
 // Páginas Públicas
@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import Contacto from './pages/public/Contacto';
-
+import { Analytics } from "@vercel/analytics/react"
 // Páginas del Alumno
 import Dashboard from './pages/Dashboard';
 import MisModulos from './pages/MisModulos';
